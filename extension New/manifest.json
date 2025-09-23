@@ -1,0 +1,112 @@
+{
+  "manifest_version": 3,
+  "name": "Universal Dating Premium Unlocker [Advanced Stealth]",
+  "version": "1.0.5",
+  "description": "Unlock premium features on all dating sites with advanced stealth capabilities.",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "scripting",
+    "notifications",
+    "alarms",
+    "commands"
+  ],
+  "host_permissions": [
+    "https://*.benaughty.com/*",
+    "https://*.tinder.com/*",
+    "https://*.bumble.com/*",
+    "https://*.hinge.co/*",
+    "https://*.match.com/*",
+    "https://*.eharmony.com/*",
+    "https://*.okcupid.com/*",
+    "https://*.pof.com/*",
+    "https://*.rundate.com/*",
+    "https://*.tawkify.com/*",
+    "https://*.wantmatures.com/*",
+    "https://*.flirtymature.com/*",
+    "https://*.hotandflirty.com/*",
+    "https://pay.google.com/*",
+    "https://api.x.ai/*"
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.benaughty.com/*",
+        "https://*.tinder.com/*",
+        "https://*.bumble.com/*",
+        "https://*.hinge.co/*",
+        "https://*.match.com/*",
+        "https://*.eharmony.com/*",
+        "https://*.okcupid.com/*",
+        "https://*.pof.com/*",
+        "https://*.rundate.com/*",
+        "https://*.tawkify.com/*",
+        "https://*.wantmatures.com/*",
+        "https://*.flirtymature.com/*",
+        "https://*.hotandflirty.com/*",
+        "https://pay.google.com/*"
+      ],
+      "js": ["js/content/detector.js"],
+      "css": ["css/stealth.css"],
+      "run_at": "document_start",
+      "world": "ISOLATED",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["js/content/*.js", "js/stealth/*.js", "js/lib/*.js"],
+      "matches": [
+        "https://*.benaughty.com/*",
+        "https://*.tinder.com/*",
+        "https://*.bumble.com/*",
+        "https://*.hinge.co/*",
+        "https://*.match.com/*",
+        "https://*.eharmony.com/*",
+        "https://*.okcupid.com/*",
+        "https://*.pof.com/*",
+        "https://*.rundate.com/*",
+        "https://*.tawkify.com/*",
+        "https://*.wantmatures.com/*",
+        "https://*.flirtymature.com/*",
+        "https://*.hotandflirty.com/*",
+        "https://pay.google.com/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "html/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "24": "icons/icon24.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_ui": {
+    "page": "html/options.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "toggle-stealth": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U",
+        "mac": "Command+Shift+U"
+      },
+      "description": "Toggle stealth mode"
+    }
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "dynamic_rules",
+        "enabled": true,
+        "path": "rules/dynamic_rules.json"
+      }
+    ]
+  }
+}

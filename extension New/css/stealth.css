@@ -1,0 +1,64 @@
+/* Universal Dating Premium Unlocker - Stealth CSS */
+
+/* Generic paywall selectors */
+.paywall,
+.premium-modal,
+.locked-content,
+.subscribe-banner,
+.premium-overlay,
+.restricted-section,
+.upsell-container,
+.subscription-prompt,
+.upgrade-button,
+.membership-prompt,
+.pay-for-chat,
+.premium-blur,
+.chat-lock {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Site-specific selectors (2025) */
+.tinder.com .UpsellBanner,
+.tinder.com .PremiumUpsell,
+.bumble.com .paywall-modal,
+.bumble.com .b-premium-lock,
+.hinge.co .PremiumBanner,
+.benaughty.com .premium-lock,
+.benaughty.com .message-paywall,
+.benaughty.com .photo-restricted,
+.benaughty.com .upgrade-banner,
+.benaughty.com .membership-overlay,
+.benaughty.com .premium-blur,
+.benaughty.com .chat-lock {
+  display: none !important;
+}
+
+/* Unlock premium features */
+.premium-feature,
+.locked-profile,
+.restricted-message,
+.premium-only,
+.boost-button,
+.super-like,
+.full-chat-access,
+.unlimited-messages,
+.full-photo-view {
+  display: block !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  opacity: 1 !important;
+}
+
+/* Prevent visual glitches */
+[data-premium-locked],
+[data-subscription-required] {
+  display: block !important;
+}
+
+/* Stealth adjustments */
+[class*="paywall"]:not(.paywall-visible),
+[class*="premium"]:not(.premium-visible) {
+  transform: translateZ(0);
+  will-change: auto;
+}

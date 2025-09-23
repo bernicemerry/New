@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal Dating Premium Unlocker - Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 24px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      font-size: 26px;
+      color: #333;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 19px;
+      margin: 16px 0 8px;
+    }
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      font-family: monospace;
+      font-size: 15px;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+      background: #fff;
+    }
+    button {
+      padding: 10px 22px;
+      margin: 10px 6px 0 0;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: background 0.15s;
+    }
+    button:hover, button:focus {
+      background-color: #0056b3;
+    }
+    .disclaimer {
+      background-color: #fff3cd;
+      padding: 15px;
+      border: 1px solid #ffeeba;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    #status {
+      color: #28a745;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    #error {
+      color: #dc3545;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .section {
+      background: #fff;
+      padding: 14px 18px;
+      border-radius: 6px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+      margin-bottom: 22px;
+    }
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .json-help {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 6px;
+      margin-top: -3px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Universal Dating Premium Unlocker - Configuration</h1>
+  <div class="disclaimer">
+    <strong>Important:</strong> This extension is for educational and personal testing purposes only. Bypassing premium features may violate the Terms of Service of dating sites (e.g., Tinder, Bumble, BeNaughty). Use responsibly and at your own risk.
+  </div>
+  <div class="section">
+    <h2>Site Configurations</h2>
+    <label for="config">Edit the JSON below to add or modify rules for specific sites (CSS, JS, API rules):</label>
+    <div class="json-help">Example: <code>{ "tinder.com": { "css": [".paywall{display:none}"], "js": ["console.log('test')"] } }</code></div>
+    <textarea id="config" placeholder="Enter site configurations in JSON format"></textarea>
+    <div>
+      <button id="save">Save Configurations</button>
+      <button id="reset">Reset to Default</button>
+      <button id="export">Export Config</button>
+      <button id="import">Import Config</button>
+    </div>
+    <div id="status"></div>
+    <div id="error"></div>
+  </div>
+  <div class="section">
+    <h2>Detection Patterns</h2>
+    <label for="patterns">Add custom URL keywords for detecting new dating sites:</label>
+    <div class="json-help">One keyword per line, e.g. <code>date, match, flirt</code></div>
+    <textarea id="patterns" placeholder="Enter URL keywords (one per line)"></textarea>
+    <button id="savePatterns">Save Patterns</button>
+  </div>
+  <div class="section">
+    <h2>Advanced Controls</h2>
+    <button id="downloadBackup">Download Full Backup</button>
+    <button id="restoreBackup">Restore From Backup</button>
+    <input type="file" id="backupFile" style="display:none" accept=".json">
+  </div>
+  <script src="../js/options.js"></script>
+</body>
+</html>

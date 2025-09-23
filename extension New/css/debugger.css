@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; background: #f7f8fa; padding: 24px; }
+h1 { font-size: 22px; margin-bottom: 18px; }
+.section { margin-bottom: 18px; padding: 14px; background: #fff; border-radius: 5px; box-shadow: 0 1px 6px #0001; }
+textarea, pre { width: 100%; font-size: 14px; font-family: monospace; border-radius: 4px; }
+button { margin-top: 6px; margin-right: 10px; padding: 6px 16px; border-radius: 4px; border: none; background: #007bff; color: #fff; cursor: pointer; }
+button:hover { background: #0056b3; }
+#status { font-weight: bold; color: #28a745; }

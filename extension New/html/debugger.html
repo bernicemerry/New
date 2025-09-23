@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unlocker Rule Debugger</title>
+  <link rel="stylesheet" href="../css/debugger.css">
+</head>
+<body>
+  <h1>Rule Debugger & Live Tester</h1>
+  <div class="section">
+    <label>Current Domain:</label>
+    <span id="currentDomain"></span>
+  </div>
+  <div class="section">
+    <label>Edit/Test CSS Selectors:</label>
+    <textarea id="cssInput" rows="4"></textarea>
+    <button id="testCss">Test CSS</button>
+  </div>
+  <div class="section">
+    <label>Edit/Test JS Snippet:</label>
+    <textarea id="jsInput" rows="4"></textarea>
+    <button id="testJs">Test JS</button>
+  </div>
+  <div class="section">
+    <button id="applyRule">Apply to Site</button>
+    <button id="undoRule">Undo Last</button>
+  </div>
+  <div class="section">
+    <label>Live Matches:</label>
+    <pre id="liveResult"></pre>
+  </div>
+  <div class="section">
+    <label>Status:</label>
+    <span id="status"></span>
+  </div>
+  <script src="../js/debugger.js"></script>
+</body>
+</html>
